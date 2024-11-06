@@ -1,0 +1,13 @@
+{
+  "name": "assignment_i",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+  "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
