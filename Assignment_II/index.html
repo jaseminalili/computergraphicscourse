@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Classroom</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    
+    <a-scene>
+      <!-- Walls -->
+      <a-plane
+        position="0 2 -5"
+        width="10"
+        height="6"
+        material="src: /assets/textures/wall.jpg; side: double; repeat: 1 1; shader: flat;"
+      ></a-plane>
+      <a-plane
+        position="0 2 8"
+        width="10"
+        height="6"
+        rotation="0 180 0"
+        material="src: /assets/textures/wall.jpg; side: double; repeat: 1 1; shader: flat;"
+      ></a-plane>
+      <a-plane
+        position="-5 2 1.5"
+        width="13"
+        height="6"
+        rotation="0 90 0"
+        material="src: /assets/textures/wall.jpg; side: double; repeat: 1 1; shader: flat;"
+      ></a-plane>
+      <a-plane
+        position="5 2 1.5"
+        width="13"
+        height="6"
+        rotation="0 -90 0"
+        material="src: /assets/textures/wall.jpg; side: double; repeat: 1 1; shader: flat;"
+      ></a-plane>
+      <a-plane
+        position="0 0 1.5"
+        width="10"
+        height="13"
+        rotation="-90 0 0"
+        material="src: /assets/textures/floor.jpg; side: double; repeat: 1 1;"
+      ></a-plane>
+      <a-plane
+        position="0 4 1.5"
+        width="10"
+        height="13"
+        rotation="90 0 0"
+        material="src: /assets/textures/wall.jpg; side: double; repeat: 1 1; shader: flat;"
+      ></a-plane>
+        
+
+      <!-- Door -->
+      <a-entity
+        gltf-model="/assets/models/classroom_door.glb"
+        position="5 0,9 6.5"
+        rotation="0 90 0"
+        scale="1 1.5 1"
+      ></a-entity>
+
+      <!-- Windows -->
+      <a-entity position="-4.92 2 0">
+        <a-entity
+          gltf-model="/assets/models/window_blind.glb"
+          position="0.10 0 0"
+          rotation="0 90 0"
+          scale="0.10 0.7 0.8"
+        ></a-entity>
+        <a-plane
+          width="1.2"
+          height="1.3"
+          rotation="0 90 0"
+          material="src: /assets/textures/preview.jpg; side: double; shader: flat;"
+        ></a-plane>
+      </a-entity>
+      <a-entity position="-4.92 2 3">
+        <a-entity
+          gltf-model="/assets/models/window_blind.glb"
+          position="0.08 0 0"
+          rotation="0 90 0"
+          scale="0.8 0.7 0.8"
+        ></a-entity>
+        <a-plane
+          width="1.2"
+          height="1.3"
+          rotation="0 90 0"
+          material="src: /assets/textures/preview.jpg; side: double; shader: flat;"
+        ></a-plane>
+      </a-entity>
+      <a-entity position="4.92 2 0">
+        <a-entity
+          gltf-model="/assets/models/window_blind.glb"
+          position="-0.08 0 0"
+          rotation="0 -90 0"
+          scale="0.8 0.7 0.8"
+        ></a-entity>
+        <a-plane
+          width="1.2"
+          height="1.3"
+          rotation="0 -90 0"
+          material="src: /assets/textures/preview.jpg; side: double; shader: flat;"
+        ></a-plane>
+      </a-entity>
+      <a-entity position="4.92 2 3">
+        <a-entity
+          gltf-model="/assets/models/window_blind.glb"
+          position="-0.08 0 0"
+          rotation="0 -90 0"
+          scale="0.8 0.7 0.8"
+        ></a-entity>
+        <a-plane
+          width="1.2"
+          height="1.3"
+          rotation="0 -90 0"
+          material="src: /assets/textures/preview.jpg; side: double; shader: flat;"
+        ></a-plane>
+      </a-entity>
+
+      <!-- Whiteboard -->
+      <a-entity
+        gltf-model="/assets/models/whiteboard.glb"
+        position="0.05 0.0 7.9"
+        scale="0.02 -0.02 0.02"
+        rotation="0.05 180 0.05"
+      ></a-entity>
+      
+      <!-- Center Rows -->
+      <a-entity position="0 0">
+
+        <!-- Row 2 -->
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="-0.5 0 0"
+          material="src: /assets/textures/wood-texture.jpeg; shader: flat;"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="0.5 0 0"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="-0.5 0 -1"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="0.5 0 -1"
+        ></a-entity>
+
+        <!-- Row 3 -->
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="-0.5 0 2"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="0.5 0 2"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="-0.5 0 1"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="0.5 0 1"
+        ></a-entity>
+
+        <!-- Row 4 -->
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="-0.5 0 4"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="0.5 0 4"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="-0.5 0 3"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="0.5 0 3"
+        ></a-entity>
+      </a-entity>
+
+      <!-- Left Rows -->
+      <a-entity position="-3 0">
+      
+
+        <!-- Row 2 -->
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="-0.5 0 0"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="0.5 0 0"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="-0.5 0 -1"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="0.5 0 -1"
+        ></a-entity>
+
+        <!-- Row 3 -->
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="-0.5 0 2"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="0.5 0 2"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="-0.5 0 1"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="0.5 0 1"
+        ></a-entity>
+
+        <!-- Row 4 -->
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="-0.5 0 4"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="0.5 0 4"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="-0.5 0 3"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="0.5 0 3"
+        ></a-entity>
+      </a-entity>
+
+      <!-- Right Rows -->
+      <a-entity position="3 0">
+        
+        <!-- Row 2 -->
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="-0.5 0 0"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="0.5 0 0"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="-0.5 0 -1"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="0.5 0 -1"
+        ></a-entity>
+
+        <!-- Row 3 -->
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="-0.5 0 2"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="0.5 0 2"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="-0.5 0 1"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="0.5 0 1"
+        ></a-entity>
+
+        <!-- Row 4 -->
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="-0.5 0 4"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/desk.glb"
+          position="0.5 0 4"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="-0.5 0 3"
+        ></a-entity>
+        <a-entity
+          gltf-model="/assets/models/chair.glb"
+          position="0.5 0 3"
+        ></a-entity>
+      </a-entity>
+
+      <!-- Lighting -->
+      <a-light type="ambient" intensity="1" color="#ffffff"></a-light>
+      <a-light
+        type="spot"
+        position="0 5 -3"
+        intensity="0.5"
+        angle="60"
+        penumbra="0.5"
+        color="#ffffff"
+      ></a-light>
+      <a-light
+        type="directional"
+        intensity="0.8"
+        position="0 6 -2"
+        color="#ffffff"
+      ></a-light>
+
+
+      <!-- Camera -->
+      <a-camera position="0 1.8 6">
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
